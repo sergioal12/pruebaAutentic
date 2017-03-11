@@ -21,7 +21,7 @@
 <div class="row" ng-controller="ventaController">
 <div class="col-md-10 col-offset-1">
 	<h1>esto es una prueba</h1>
-	<a>{{prueba}}</a>
+	<a>{{pruebaPrimera}}</a>
 </div>
 </div>
 	

@@ -38,11 +38,15 @@ public class productoDAO {
 	}
 	
 	@Transactional
-	public productoBean findById(int id){
+	public productoBean productoFindById(int id){
 		Session session = sessionFactory.getCurrentSession();
 		Query query = session.createQuery("from productoBean where id = :id");
 		query.setParameter("id",id);
+		System.out.println("esto es query, dentro de findById "+query.toString());
 		productoBean producto = (productoBean) query.list();
+		System.out.println("esto es producto, el resultado de la consulta que se hace a la la tabla " + producto.toString());
+		
+		
 		return producto;
 	}
 

@@ -35,9 +35,10 @@ public class ProductoServiceImpl implements productoService{
 	}
 
 	@Override
-	public productoBean findById(int id) {
+	public productoBean productoFindById(int id) {
 		// TODO Auto-generated method stub
-		return dao.findById(id);
+		System.out.println("aqui estamos dentro de productoServiceImpl");
+		return dao.productoFindById(id);
 	}
 
 }
