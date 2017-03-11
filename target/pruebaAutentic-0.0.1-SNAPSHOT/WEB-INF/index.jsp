@@ -19,9 +19,9 @@
 </head>
 <body ng-app="ventas">
 <div class="row" ng-controller="ventaController">
-<div class="col-md-10 col-offset-1">
+<div class="col-md-10 col-offset-1" ng-init="getProductos()">
 	<h1>esto es una prueba</h1>
-	<a>{{pruebaPrimera}}</a>
+	<a>{{productos}}</a>
 </div>
 </div>
 	

@@ -19,9 +19,26 @@
 </head>
 <body ng-app="ventas">
 <div class="row" ng-controller="ventaController">
-<div class="col-md-10 col-offset-1">
-	<h1>esto es una prueba</h1>
-	<a>{{pruebaPrimera}}</a>
+<div class="col-md-10 col-offset-2" ng-init="getProductos()">
+	<h1>prueba autentic sergio alejandro plata</h1>
+	<div ng-repeat="producto in productos">
+		<label>producto {{$index+1}}</label>
+		<a>{{producto.id}}</a>
+		<a>{{producto.nomProducto}}</a>
+		<a>{{producto.cantProducto}}</a>
+		<a>{{producto.ubicacionProducto}}</a>
+	</div>
+</div>
+<div class="col-md-10 col-offset-2" ng-init="getVentas()">
+	<div ng-repeat="venta in ventas">
+		<label>venta: {{$index+1}}</label>
+		<a>{{venta.id}}</a>
+		<a>{{venta.ventaEfectuada}}</a>
+		<a>{{venta.fechaVenta}}</a>
+		<a>{{venta.totalVenta}}</a>
+		<a>{{venta.despachoVenta}}</a>
+		<a>{{venta.idProducto}}</a>
+	</div>
 </div>
 </div>
 	
