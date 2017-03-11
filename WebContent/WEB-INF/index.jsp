@@ -18,26 +18,58 @@
 
 </head>
 <body ng-app="ventas">
-<div class="row" ng-controller="ventaController">
-<div class="col-md-10 col-offset-2" ng-init="getProductos()">
-	<h1>prueba autentic sergio alejandro plata</h1>
-	<div ng-repeat="producto in productos">
-		<label>producto {{$index+1}}</label>
-		<a>{{producto.id}}</a>
-		<a>{{producto.nomProducto}}</a>
-		<a>{{producto.cantProducto}}</a>
-		<a>{{producto.ubicacionProducto}}</a>
+<div class="row panel panel-default" ng-controller="ventaController">
+	<div class="panel-heading">
+		<h1>prueba autentic sergio alejandro plata</h1>
+	</div>
+<div class="col-md-10 col-offset-2 panel panel-default" ng-init="getProductos()">
+	<div class="panel-heading">
+		<h2>Productos</h2>
+	</div>
+	
+	<div ng-repeat="producto in productos" class="panel-body">
+		<div class="input-group">
+			<span class="input-group-addon">Id producto
+			<input readonly="true" class="form-control" placeholder="{{producto.id}}">
+			</span>
+			<span class="input-group-addon">nombre producto
+			<input readonly="true" class="form-control" placeholder="{{producto.nomProducto}}">
+			</span> 
+			<span class="input-group-addon">Cantidad 
+			<input readonly="true" class="form-control" placeholder="{{producto.cantProducto}}">
+			</span>
+			<span class="input-group-addon">ubicacion
+			<input readonly="true" class="form-control" placeholder="{{producto.ubicacionProducto}}">
+			</span>
+		</div> 
 	</div>
 </div>
-<div class="col-md-10 col-offset-2" ng-init="getVentas()">
-	<div ng-repeat="venta in ventas">
-		<label>venta: {{$index+1}}</label>
-		<a>{{venta.id}}</a>
-		<a>{{venta.ventaEfectuada}}</a>
-		<a>{{venta.fechaVenta}}</a>
-		<a>{{venta.totalVenta}}</a>
-		<a>{{venta.despachoVenta}}</a>
-		<a>{{venta.idProducto}}</a>
+	
+<div class="col-md-10 col-offset-2 panel panel-default" ng-init="getVentas()">
+	<div class="panel-heading">
+		<h2>Ventas</h2>
+	</div>
+	<div ng-repeat="venta in ventas" class="panel-body">
+		<div class="input-group">
+			<span class="input-group-addon">Id venta
+				<input readonly="true" class="form-control" placeholder="{{venta.id}}">
+			</span>
+			<span class="input-group-addon">estado de la venta
+				<input readonly="true" class="form-control" placeholder="{{venta.ventaEfectuada}}">
+			</span>
+			<span class="input-group-addon">fecha de la venta
+				<input readonly="true" class="form-control" placeholder="{{venta.fechaVenta}}">
+			</span>
+			<span class="input-group-addon">total venta
+				<input readonly="true" class="form-control" placeholder="{{venta.totalVenta}}">
+			</span>
+			<span class="input-group-addon">lugar de venta
+				<input readonly="true" class="form-control" placeholder="{{venta.despachoVenta}}">
+			</span>
+			<span class="input-group-addon">Id producto
+				<input readonly="true" class="form-control" placeholder="{{venta.idProducto}}">
+			</span>
+		</div>
 	</div>
 </div>
 </div>
